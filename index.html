@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ANNAPURNA 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #e94d91;
+  --purple: #80346e;
+  --text: #76516e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--purple);
+  background:
+    radial-gradient(circle at 10% 15%, #ffe3ed 0%, transparent 45%),
+    radial-gradient(circle at 90% 75%, #f4ddfa 0%, transparent 48%),
+    #fff8fb;
+}
+
+/* HEADER */
+
+header {
+  padding: 35px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--pink);
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.header-pill {
+  border: 1px solid #f9ccdf;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50px;
+  padding: 15px 25px;
+  font-size: 14px;
+}
+
+/* MAIN HERO */
+
+.hero {
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  padding: 55px 5% 90px;
+  gap: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: #d15b91;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+h1 {
+  font-size: clamp(42px, 5.5vw, 85px);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.name {
+  color: var(--pink);
+}
+
+.heart {
+  font-size: 0.8em;
+  display: inline-block;
+  animation: heartbeat 2s infinite;
+}
+
+.description {
+  font-size: clamp(17px, 1.5vw, 22px);
+  color: var(--text);
+  line-height: 2.1;
+  max-width: 670px;
+  margin-top: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 18px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: transform 0.3s;
+  font-family: inherit;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  color: white;
+  background: linear-gradient(135deg, #ff6ba9, #e5448c);
+  box-shadow: 0 10px 30px rgba(233,77,145,0.25);
+}
+
+.btn-secondary {
+  color: var(--purple);
+  background: white;
+  border: 1px solid #f5c6dc;
+}
+
+/* BIRTHDAY CAKE */
+
+.cake-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 530px;
+}
+
+.cake-circle {
+  width: min(95%, 540px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffd9ea, #e9a8d8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 25px 70px rgba(192,99,160,0.13);
+  animation: float 5s ease-in-out infinite;
+}
+
+.cake {
+  font-size: clamp(130px, 18vw, 260px);
+  filter: drop-shadow(0 18px 15px rgba(109,50,79,0.18));
+}
+
+.decoration {
+  position: absolute;
+  font-size: 45px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.dec1 { top: 8%; left: 4%; }
+.dec2 { top: 12%; right: 4%; animation-delay: 1s; }
+.dec3 { bottom: 7%; left: 7%; animation-delay: 2s; }
+.dec4 { bottom: 10%; right: 3%; animation-delay: 1.5s; }
+
+/* BIRTHDAY MESSAGE */
+
+.message-section {
+  text-align: center;
+  padding: 85px 20px 110px;
+  background: rgba(255,255,255,0.5);
+}
+
+.section-label {
+  color: var(--pink);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.message-section h2 {
+  font-size: clamp(30px, 4vw, 52px);
+  margin-bottom: 25px;
+}
+
+.message-section p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--text);
+  font-size: 19px;
+  line-height: 2.1;
+}
+
+.signature {
+  margin-top: 40px;
+  color: var(--pink);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* SURPRISE POPUP */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(83,35,75,0.65);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.popup {
+  background: linear-gradient(145deg, #fff9fc, #ffe5f0);
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 45px 30px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 25px 100px rgba(70,20,60,0.3);
+  animation: pop 0.5s ease;
+}
+
+.popup-icon {
+  font-size: 75px;
+  margin-bottom: 15px;
+}
+
+.popup h2 {
+  font-size: 35px;
+  color: var(--pink);
+  margin-bottom: 20px;
+}
+
+.popup p {
+  color: var(--text);
+  line-height: 2.1;
+  font-size: 17px;
+}
+
+.popup-signature {
+  color: var(--pink);
+  font-weight: 700;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: none;
+  color: var(--purple);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+  animation: rise linear forwards;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* CONFETTI */
+
+.confetti {
+  position: fixed;
+  top: -20px;
+  width: 10px;
+  height: 15px;
+  z-index: 200;
+  pointer-events: none;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+  header {
+    padding: 25px 5%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 6%;
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin-bottom: 25px;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .cake-area {
+    min-height: 390px;
+  }
+
+  .cake-circle {
+    width: min(85%, 380px);
+  }
+
+  .cake {
+    font-size: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .header-pill {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+  }
+
+  .cake-area {
+    min-height: 300px;
+  }
+
+  .cake {
+    font-size: 140px;
+  }
+
+  .decoration {
+    font-size: 28px;
+  }
+
+  .message-section p {
+    font-size: 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="logo">✦ MADE WITH LOVE</div>
+
+  <div class="header-pill">
+    నీ కోసం ఒక చిన్న సర్‌ప్రైజ్ 💌
+  </div>
+</header>
+
+<!-- MAIN BIRTHDAY SECTION -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      ✧ ఈ రోజు అంతా నీ కోసమే ✧
+    </div>
+
+    <h1>
+      పుట్టినరోజు<br>
+      శుభాకాంక్షలు,<br>
+      <span class="name">ANNAPURNA!</span>
+      <span class="heart">💗</span>
+    </h1>
+
+    <p class="description">
+      సాధారణ క్షణాలను కూడా అందమైన జ్ఞాపకాలుగా
+      మార్చే నీకు...
+      <br><br>
+      ఈ పుట్టినరోజు నీ చిరునవ్వులా అందంగా,
+      నీ మనసులా ప్రత్యేకంగా ఉండాలని కోరుకుంటున్నాను.
+      💖✨
+    </p>
+
+    <div class="buttons">
+
+      <button class="btn btn-primary" onclick="openSurprise()">
+        🎁 నీ సర్‌ప్రైజ్ అనుకుని ఇది ఓపెన్ చెయ్యి రా..!
+      </button>
+
+      <button class="btn btn-secondary"
+              onclick="document.getElementById('wish').scrollIntoView()">
+        💌 నీ కోసం ఒక చిన్న సందేశం
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- BIRTHDAY CAKE -->
+
+  <div class="cake-area">
+
+    <div class="cake-circle">
+      <div class="cake">🎂</div>
+    </div>
+
+    <div class="decoration dec1">💖</div>
+    <div class="decoration dec2">✨</div>
+    <div class="decoration dec3">🌸</div>
+    <div class="decoration dec4">🎀</div>
+
+  </div>
+
+</section>
+
+<!-- BIRTHDAY WISHES SECTION -->
+
+<section class="message-section" id="wish">
+
+  <div class="section-label">
+    ✦ నీ కోసం ఒక చిన్న మాట ✦
+  </div>
+
+  <h2>నా Bestesstest Friend కేతనకు 💗</h2>
+
+  <p>
+    హ్యాపీ బర్త్‌డే రా  ! 🎂💖
+    <br><br>
+
+    కొంతమంది మన జీవితంలోకి వచ్చి
+    సాధారణ రోజులను కూడా ఎంతో ప్రత్యేకంగా మారుస్తారు.
+    <br><br>
+
+    అలాంటి వారిలో నువ్వు ఒకరు.
+    <br><br>
+
+    నీ జీవితంలో ప్రతి రోజు ఆనందంగా ఉండాలి.
+    నీ కలలన్నీ నిజం కావాలి.
+    <br><br>
+
+    నువ్వు కోరుకున్న ప్రతి విజయం నీ సొంతం కావాలి.
+    <br><br>
+
+    నీ చిరునవ్వు ఎప్పటికీ ఇలాగే ఉండాలి.
+    నీ జీవితంలో ఎన్నో అందమైన జ్ఞాపకాలు రావాలి.
+    <br><br>
+
+    మన స్నేహం ఇలాగే ఎప్పటికీ కొనసాగాలని
+    మనస్ఫూర్తిగా కోరుకుంటున్నాను. 💕
+  </p>
+
+  <div class="signature">
+    Made with love, SubbaRao ♡
+  </div>
+
+</section>
+
+<!-- SURPRISE POPUP -->
+
+<div class="overlay"
+     id="surprise"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="surpriseTitle">
+
+  <div class="popup">
+
+    <button class="close"
+            onclick="closeSurprise()"
+            aria-label="Close surprise">
+      ×
+    </button>
+
+    <div class="popup-icon">🎁💗</div>
+
+    <h2 id="surpriseTitle">
+      సర్‌ప్రైజ్ ! 🎉
+    </h2>
+
+    <p>
+      ఈ రోజు నీ జీవితంలో
+      ఒక అందమైన జ్ఞాపకంగా నిలిచిపోవాలి.
+      <br><br>
+
+      నీ జీవితంలో ఎప్పుడూ
+      సంతోషం, ప్రేమ, విజయం ఉండాలి.
+      <br><br>
+
+      నువ్వు కన్న ప్రతి కల నిజం కావాలి.
+      <br><br>
+
+      ప్రతి రోజు నీకు ఒక కొత్త ఆనందాన్ని,
+      ఒక కొత్త అవకాశాన్ని తీసుకురావాలి.
+      <br><br>
+
+      నీ నవ్వు ఎప్పటికీ ఇలాగే ఉండాలి.
+      <br><br>
+
+      మనం కలిసి మరెన్నో అందమైన
+      జ్ఞాపకాలు సృష్టించుకోవాలి.
+      <br><br>
+
+      మరోసారి పుట్టినరోజు శుభాకాంక్షలు,
+      రా! 🎂✨💗
+    </p>
+
+    <div class="popup-signature">
+      Made with love, SUBBARAO ♡
+    </div>
+
+    <br>
+
+    <button class="btn btn-primary"
+            onclick="closeSurprise()">
+      Thank You 💗
+    </button>
+
+  </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// Open birthday surprise
+function openSurprise() {
+  document.getElementById("surprise").classList.add("active");
+  document.body.style.overflow = "hidden";
+  launchConfetti();
+}
+
+// Close birthday surprise
+function closeSurprise() {
+  document.getElementById("surprise").classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+// Close using Escape key
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeSurprise();
+  }
+});
+
+// Close when clicking outside popup
+document.getElementById("surprise").addEventListener(
+  "click",
+  function(event) {
+    if (event.target === this) {
+      closeSurprise();
+    }
+  }
+);
+
+// Confetti animation
+function launchConfetti() {
+
+  const colors = [
+    "#ff6ba9",
+    "#e94d91",
+    "#ffd166",
+    "#c9a7ff",
+    "#ffffff"
+  ];
+
+  for (let i = 0; i < 110; i++) {
+
+    const confetti = document.createElement("div");
+
+    confetti.className = "confetti";
+
+    confetti.style.left = Math.random() * 100 + "vw";
+
+    confetti.style.background =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    confetti.style.animationDuration =
+      (3 + Math.random() * 3) + "s";
+
+    confetti.style.animationDelay =
+      Math.random() * 1.5 + "s";
+
+    document.body.appendChild(confetti);
+
+    setTimeout(() => confetti.remove(), 7000);
+  }
+}
+
+// Floating hearts
+function createHeart() {
+
+  const heart = document.createElement("div");
+
+  heart.className = "floating-heart";
+
+  const decorations = ["💗", "💕", "🌸", "✨"];
+
+  heart.textContent =
+    decorations[Math.floor(Math.random() * decorations.length)];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.bottom = "-40px";
+
+  heart.style.fontSize =
+    (15 + Math.random() * 18) + "px";
+
+  heart.style.animationDuration =
+    (6 + Math.random() * 5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 11000);
+}
+
+setInterval(createHeart, 1200);
+
+</script>
+
+</body>
+</html>
